@@ -25,10 +25,12 @@
 - 更新 `outputs/screenshots.zip` 為本次全部書籍截圖。
 - 有失敗來源時，網頁必須清楚區分「待查核」與「前 100 名未比對到」，以最近成功資料加原日期顯示。必要時先改善網頁狀態支援，再發布。
 - 使用 Browser Use 驗證網站的資料筆數、篩選、搜尋、單本圖片及下載。確認每筆 screenshot 存在且名次與資料一致。
-- 只提交本站文件與 outputs 公開交付物，不加入 work、原始瀏覽紀錄、驗證資料或秘密。`git add` 具名檔案，commit 後 push origin main，再執行 `node scripts/publish.mjs` 發布 gh-pages branch。
-- 使用 `gh api repos/joshhu/30-computer-use-browser-use-dom-2/pages/builds/latest` 確認 built；再從公開網址抽查今日日期與代表書籍。
+- 只提交本站文件與 outputs 交付物，不加入 work、原始瀏覽紀錄、驗證資料或秘密。GitHub main 只保存原始碼；禁止推送 gh-pages、啟用 GitHub Pages 或使用 josh.hu 等使用者既有網域。
+- 網站只用 OpenAI ChatGPT Sites 發表，沿用 project_id `appgprj_6aa3d9d886808191ae4d5f0fd6510ca9`。本機 checkout 在 `work/sites-dashboard`，`.openai/hosting.json` 的 static.directory 為 `dist`。不得另建同名網站。
+- 依當次 Sites hosting skill 先 get_site，再使用 site-workflow 開啟原始碼。取得最新遠端狀態後，將 outputs 交付物白名單同步至 dist；保留歷史資料、舊報表與既有 collector.html。Sites 舊報表保存在 `report-2026-09-10.html`。
+- 按 Sites skill 推送並封裝精確 commit，透過 Sites 原生工具儲存版本及發表，保留既有網站的公開權限。get_deployment_status 成功後才報告已更新。憑證只保留記憶體與 stdin，不寫入檔案或公開。
 - 更新正常且榜單沒有實質變動時保持安靜；有上榜、離榜、重要名次變化、失敗或需使用者操作才通知，附網頁連結與可查證的摘要。不要每次固定發無變更狀態訊息。
 
 ## 執行條件
 
-本機 Codex 與瀏覽功能、GitHub 權限須可用。未確認實際執行成功前，不可保證每日資料一定準時更新。
+本機 Codex 與瀏覽功能、Sites 權限須可用。未確認實際執行成功前，不可保證每日資料一定準時更新。

@@ -1,5 +1,2 @@
-import {execFileSync} from 'node:child_process';
-const run=(...args)=>execFileSync('git',args,{encoding:'utf8'}).trim();
-const sha=run('subtree','split','--prefix=outputs','HEAD');
-execFileSync('git',['push','origin',sha+':refs/heads/gh-pages'],{stdio:'inherit'});
-console.log('GitHub Pages branch published:',sha);
+console.error('GitHub Pages 發表已停用。請依 UPDATE.md 使用 OpenAI ChatGPT Sites 發表。');
+process.exitCode = 1;

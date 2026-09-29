@@ -14,13 +14,13 @@
 
 ## 使用
 
-開啟 `outputs/index.html` 即可使用。所有截圖以相對路徑保存，不需第三方圖片 CDN。公開網站從本 repository 的 `gh-pages` branch 提供。
+開啟 `outputs/index.html` 即可使用。所有截圖以相對路徑保存，不需第三方圖片 CDN。網站只透過 OpenAI ChatGPT Sites 發表，沿用「深智數位｜書籍排行榜」。禁止使用 GitHub Pages 或使用者既有網域。
 
 本機預覽可用 `node scripts/serve.mjs`，然後開啟終端機顯示的網址。
 
 ## 每日更新
 
-每天台灣時間 09:00 由 Codex 此聊天的 automation 執行。具體程序見 `UPDATE.md`。這不是網頁前端直接抓取書店資料；更新需要本機 Codex 環境、瀏覽功能與 GitHub 權限可用。
+每天台灣時間 09:00 由 Codex 此聊天的 automation 執行。具體程序見 `UPDATE.md`。更新需要本機 Codex 環境、瀏覽功能與 Sites 權限可用。
 
 正常瀏覽、逐頁讀取，避免不必要的重新整理。遇到 CAPTCHA、403 或驗證頁停止該站並標示未完成，通知使用者接手；不使用 stealth、代理輪替或驗證繞過。
 
@@ -34,6 +34,6 @@
 - `outputs/cards/`：單本原站截圖。
 - `outputs/screenshots/`：榜單原頁截圖。
 - `scripts/prepare-data.mjs`：將查核資料與 DOM 座標轉換為卡片截圖及報表。
-- `scripts/publish.mjs`：只發布 `outputs/` 白名單檔案到 GitHub Pages。
+- `scripts/publish.mjs`：已停用舊 GitHub Pages 發表功能，執行時只顯示移轉說明。
 
 未提供虛構資料、即時排名或尚未累積的升降趨勢。書籍封面與書店畫面權利屬原權利人；本站保留來源連結。
