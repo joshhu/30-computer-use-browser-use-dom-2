@@ -1,0 +1,11 @@
+work/
+tmpcode/
+.env
+.env.*
+.DS_Store
+outputs/screenshots/sample-card.png
+outputs/publisher-catalog.json
+outputs/publisher-verifications.json
+outputs/raw-rankings.json
+outputs/screenshot-regions.json
+outputs/screenshot-cutoffs.json
